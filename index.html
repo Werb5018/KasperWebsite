@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>No Objectives</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ── Navigation ──────────────────────── -->
+  <nav>
+    <div class="nav-logo" data-nav="gallery">No Objectives</div>
+    <ul class="nav-links">
+      <li><a href="#gallery"  data-nav="gallery">Work</a></li>
+      <li><a href="#about"    data-nav="about">About</a></li>
+      <li><a href="#contact"  data-nav="contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── Gallery ─────────────────────────── -->
+  <section id="gallery">
+    <div class="gallery-grid" id="gallery-grid"></div>
+  </section>
+
+  <!-- ── About ───────────────────────────── -->
+  <section id="about">
+    <div class="about-inner">
+      <div class="about-image-wrap">
+        <!--
+          Replace images/about/profile.jpg with your photo.
+          Recommended: portrait format, minimum 800×1000px.
+        -->
+        <img src="images/about/profile.jpg"
+             alt="Profile photo"
+             onerror="this.parentElement.innerHTML='<div class=\\'img-placeholder\\'><span>Profile photo</span></div>'">
+      </div>
+      <div class="about-text">
+        <p class="about-text-label">About</p>
+        <!--
+          ── EDIT BELOW ──────────────────────────────────────
+          Replace [Your Name] and the bio text with your own.
+        -->
+        <h2 class="about-name">[Your Name]</h2>
+        <p class="about-bio">
+          Brief bio goes here. A few sentences about who you are,
+          what you think about, and what drives the work you share
+          on this site. Keep it honest and keep it short.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contact ─────────────────────────── -->
+  <section id="contact">
+    <div class="contact-inner">
+      <p class="contact-label">Get in touch</p>
+      <!--
+        ── EDIT BELOW ──────────────────────────────────────
+        Replace with your real name, email, and handles.
+      -->
+      <p class="contact-name">[Your Name]</p>
+      <p class="contact-email">
+        <a href="mailto:hello@example.com">hello@example.com</a>
+      </p>
+      <div class="social-links">
+        <a class="social-link" href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="social-link" href="https://instagram.com/yourhandle"  target="_blank" rel="noopener">Instagram</a>
+        <a class="social-link" href="https://twitter.com/yourhandle"    target="_blank" rel="noopener">X / Twitter</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ──────────────────────────── -->
+  <footer>
+    <p>&copy; <span id="year"></span> No Objectives</p>
+  </footer>
+
+  <!-- ── Modal ───────────────────────────── -->
+  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal">
+      <button class="modal-close" id="modal-close" aria-label="Close">&#215;</button>
+      <div class="modal-image">
+        <img id="modal-img" src="" alt="">
+      </div>
+      <div class="modal-body">
+        <div>
+          <p class="modal-date"  id="modal-date"></p>
+          <h2 class="modal-headline" id="modal-headline"></h2>
+          <p class="modal-text"  id="modal-text"></p>
+        </div>
+        <a class="modal-link" id="modal-link" href="#" target="_blank" rel="noopener">
+          View on LinkedIn &rarr;
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="data/posts.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
