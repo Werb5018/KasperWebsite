@@ -81,6 +81,7 @@
 
   <!-- ── Modal ───────────────────────────── -->
   <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true">
+    <button class="slide-nav slide-nav--prev" id="slide-prev" aria-label="Previous post">&#8592;</button>
     <div class="modal">
       <button class="modal-close" id="modal-close" aria-label="Close">&#215;</button>
       <div class="modal-image">
@@ -97,6 +98,7 @@
         </a>
       </div>
     </div>
+    <button class="slide-nav slide-nav--next" id="slide-next" aria-label="Next post">&#8594;</button>
   </div>
 
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
