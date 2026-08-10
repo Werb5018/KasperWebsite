@@ -463,7 +463,7 @@ nav.scrolled .nav-toggle span { background: var(--ink); }
 }
 .service-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
 .service-card:hover .service-media img { transform: scale(1.04); }
-.service-body { padding: 34px 40px 44px; display: flex; flex-direction: column; flex: 1; }
+.service-body { padding: 44px 40px; display: flex; flex-direction: column; flex: 1; }
 .service-num {
   font-family: var(--mono);
   font-size: 12px;
