@@ -39,18 +39,12 @@ js/app.js       →  nav, smooth scrolling, scroll-in animation
 | Brand colours | `css/style.css` — the `:root` block at the very top |
 | Fonts | `css/style.css` — `--sans`, `--serif`, `--mono` in `:root` |
 
-### Using a real photo in the hero
+### Swapping the hero photo
 
-By default the hero shows a brand-coloured illustrated landscape (inline SVG)
-so nothing looks broken before you add assets. To use a photograph instead:
-
-1. Drop the image in a new `images/` folder, e.g. `images/hero.jpg`.
-2. In `index.html`, find the hero comment block and uncomment this line:
-   ```html
-   <img class="hero-photo" src="images/hero.jpg" alt="">
-   ```
-   Place it just before `<div class="hero-art" …>` and delete (or keep) the
-   SVG block. The dark overlay that keeps the logo readable is already applied.
+The hero uses `images/hero.jpg` (the cover photograph from the brand strategy).
+To change it, just replace that file with your own — roughly landscape,
+~1920px wide. The dark overlay that keeps the logo readable is applied
+automatically in CSS, so no other changes are needed.
 
 ---
 

@@ -31,35 +31,13 @@
   <header id="top" class="hero">
     <!--
       ── HERO IMAGE ──────────────────────────────────────────────
-      A brand-coloured illustrated landscape is drawn in by default so
-      the site looks complete out of the box. To use a real photograph
-      instead, drop it in /images/ and uncomment the line below
-      (then it will sit behind the logo automatically):
-
-      <img class="hero-photo" src="images/hero.jpg" alt="">
+      To swap this photograph, replace /images/hero.jpg with your own
+      (roughly landscape, ~1920px wide). The dark overlay that keeps the
+      logo readable is applied automatically in CSS.
     -->
-    <div class="hero-art" aria-hidden="true">
-      <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%"  stop-color="#1b3327"/>
-            <stop offset="55%" stop-color="#213b2d"/>
-            <stop offset="100%" stop-color="#2b4a38"/>
-          </linearGradient>
-          <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%"  stop-color="#E9BE89"/>
-            <stop offset="100%" stop-color="#DA8D31"/>
-          </linearGradient>
-        </defs>
-        <rect width="1440" height="900" fill="url(#sky)"/>
-        <circle cx="720" cy="430" r="180" fill="url(#sun)" opacity="0.92"/>
-        <!-- horizon layers -->
-        <path d="M0 560 C 260 500, 520 540, 760 552 C 1010 565, 1220 520, 1440 560 L1440 900 L0 900 Z" fill="#506157" opacity="0.55"/>
-        <path d="M0 640 C 300 600, 560 660, 820 648 C 1080 636, 1250 668, 1440 640 L1440 900 L0 900 Z" fill="#3c5044" opacity="0.75"/>
-        <path d="M0 730 C 320 700, 620 756, 900 742 C 1140 730, 1300 758, 1440 736 L1440 900 L0 900 Z" fill="#D8CAB0" opacity="0.28"/>
-        <path d="M0 812 C 360 792, 700 828, 1000 818 C 1220 810, 1330 826, 1440 814 L1440 900 L0 900 Z" fill="#162A1F"/>
-      </svg>
-    </div>
+    <img class="hero-photo" src="images/hero.jpg"
+         alt="A woman resting in a small boat on clear turquoise water above a coral reef">
+    <div class="hero-scrim" aria-hidden="true"></div>
 
     <div class="hero-inner">
       <p class="hero-logo">no objectives</p>
