@@ -3,104 +3,321 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>No Objectives</title>
+  <title>No Objectives — We turn minority insight into majority action</title>
+  <meta name="description" content="No Objectives is a non-profit research and design agency. We turn minority insight into majority action — carrying knowledge the whole way from the paper to the street.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- ── Navigation ──────────────────────── -->
-  <nav>
-    <div class="nav-logo" data-nav="gallery">No Objectives</div>
+  <!-- ── Navigation ──────────────────────────────────── -->
+  <nav id="nav">
+    <a href="#top" class="nav-logo" data-nav="top">no objectives</a>
     <ul class="nav-links">
-      <li><a href="#gallery"  data-nav="gallery">Work</a></li>
       <li><a href="#about"    data-nav="about">About</a></li>
-      <li><a href="#contact"  data-nav="contact">Contact</a></li>
+      <li><a href="#work"     data-nav="work">Work</a></li>
+      <li><a href="#services" data-nav="services">Services</a></li>
+      <li><a href="#contact"  data-nav="contact" class="nav-cta">Get in touch</a></li>
     </ul>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
   </nav>
 
-  <!-- ── Gallery ─────────────────────────── -->
-  <section id="gallery">
-    <div class="gallery-grid" id="gallery-grid"></div>
-  </section>
+  <!-- ── Hero ────────────────────────────────────────── -->
+  <header id="top" class="hero">
+    <!--
+      ── HERO IMAGE ──────────────────────────────────────────────
+      A brand-coloured illustrated landscape is drawn in by default so
+      the site looks complete out of the box. To use a real photograph
+      instead, drop it in /images/ and uncomment the line below
+      (then it will sit behind the logo automatically):
 
-  <!-- ── About ───────────────────────────── -->
-  <section id="about">
-    <div class="about-inner">
-      <div class="about-image-wrap">
-        <!--
-          Replace images/about/profile.jpg with your photo.
-          Recommended: portrait format, minimum 800×1000px.
-        -->
-        <img src="images/about/profile.jpg"
-             alt="Profile photo"
-             onerror="this.parentElement.innerHTML='<div class=\\'img-placeholder\\'><span>Profile photo</span></div>'">
-      </div>
-      <div class="about-text">
-        <p class="about-text-label">About</p>
-        <!--
-          ── EDIT BELOW ──────────────────────────────────────
-          Replace [Your Name] and the bio text with your own.
-        -->
-        <h2 class="about-name">[Your Name]</h2>
-        <p class="about-bio">
-          Brief bio goes here. A few sentences about who you are,
-          what you think about, and what drives the work you share
-          on this site. Keep it honest and keep it short.
-        </p>
+      <img class="hero-photo" src="images/hero.jpg" alt="">
+    -->
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%"  stop-color="#1b3327"/>
+            <stop offset="55%" stop-color="#213b2d"/>
+            <stop offset="100%" stop-color="#2b4a38"/>
+          </linearGradient>
+          <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%"  stop-color="#E9BE89"/>
+            <stop offset="100%" stop-color="#DA8D31"/>
+          </linearGradient>
+        </defs>
+        <rect width="1440" height="900" fill="url(#sky)"/>
+        <circle cx="720" cy="430" r="180" fill="url(#sun)" opacity="0.92"/>
+        <!-- horizon layers -->
+        <path d="M0 560 C 260 500, 520 540, 760 552 C 1010 565, 1220 520, 1440 560 L1440 900 L0 900 Z" fill="#506157" opacity="0.55"/>
+        <path d="M0 640 C 300 600, 560 660, 820 648 C 1080 636, 1250 668, 1440 640 L1440 900 L0 900 Z" fill="#3c5044" opacity="0.75"/>
+        <path d="M0 730 C 320 700, 620 756, 900 742 C 1140 730, 1300 758, 1440 736 L1440 900 L0 900 Z" fill="#D8CAB0" opacity="0.28"/>
+        <path d="M0 812 C 360 792, 700 828, 1000 818 C 1220 810, 1330 826, 1440 814 L1440 900 L0 900 Z" fill="#162A1F"/>
+      </svg>
+    </div>
+
+    <div class="hero-inner">
+      <p class="hero-logo">no objectives</p>
+      <h1 class="hero-tagline">We turn minority insight into majority action.</h1>
+      <p class="hero-sub">A non-profit research &amp; design agency, carrying knowledge the whole way &mdash; from the paper to the street.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary" data-nav="contact">Start a conversation</a>
+        <a href="#intro" class="btn btn-ghost btn-ghost-light" data-nav="intro">See what we do</a>
       </div>
     </div>
-  </section>
 
-  <!-- ── Contact ─────────────────────────── -->
-  <section id="contact">
-    <div class="contact-inner">
-      <p class="contact-label">Get in touch</p>
-      <!--
-        ── EDIT BELOW ──────────────────────────────────────
-        Replace with your real name, email, and handles.
-      -->
-      <p class="contact-name">[Your Name]</p>
-      <p class="contact-email">
-        <a href="mailto:hello@example.com">hello@example.com</a>
+    <a href="#intro" class="scroll-cue" data-nav="intro" aria-label="Scroll down">
+      <span>Scroll</span>
+      <svg width="14" height="24" viewBox="0 0 14 24" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M7 1v20M1 15l6 6 6-6"/></svg>
+    </a>
+  </header>
+
+  <main>
+
+    <!-- ── Introduction + section buttons ──────────────── -->
+    <section id="intro" class="intro reveal">
+      <p class="eyebrow">[ Introduction ]</p>
+      <p class="intro-lead">
+        The world doesn&rsquo;t lack awareness. It lacks agency. People already know
+        the system is failing. What they lack is a future they can see themselves in,
+        and a way to help build it.
       </p>
-      <div class="social-links">
-        <a class="social-link" href="https://linkedin.com/in/yourhandle" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="social-link" href="https://instagram.com/yourhandle"  target="_blank" rel="noopener">Instagram</a>
-        <a class="social-link" href="https://twitter.com/yourhandle"    target="_blank" rel="noopener">X / Twitter</a>
-      </div>
-    </div>
-  </section>
+      <p class="intro-body">
+        No Objectives exists to close the gap between knowing and acting. We are one
+        organisation carrying knowledge the whole way &mdash; from insight to
+        implementation, from the paper to the street &mdash; without thinning the rigour,
+        flattening the feeling, or losing the momentum along the way.
+      </p>
 
-  <!-- ── Footer ──────────────────────────── -->
-  <footer>
-    <p>&copy; <span id="year"></span> No Objectives</p>
-  </footer>
-
-  <!-- ── Modal ───────────────────────────── -->
-  <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true">
-    <div class="modal">
-      <button class="modal-close" id="modal-close" aria-label="Close">&#215;</button>
-      <div class="modal-image">
-        <img id="modal-img" src="" alt="">
-      </div>
-      <div class="modal-body">
-        <div>
-          <p class="modal-date"  id="modal-date"></p>
-          <h2 class="modal-headline" id="modal-headline"></h2>
-          <p class="modal-text"  id="modal-text"></p>
-        </div>
-        <a class="modal-link" id="modal-link" href="#" target="_blank" rel="noopener">
-          View on LinkedIn &rarr;
+      <div class="nav-cards">
+        <a href="#about" class="nav-card" data-nav="about">
+          <span class="nav-card-index">01</span>
+          <span class="nav-card-title">About us</span>
+          <span class="nav-card-desc">Who we are &amp; what we stand for</span>
+          <span class="nav-card-arrow">&rarr;</span>
+        </a>
+        <a href="#work" class="nav-card" data-nav="work">
+          <span class="nav-card-index">02</span>
+          <span class="nav-card-title">Work</span>
+          <span class="nav-card-desc">Selected projects &amp; proof</span>
+          <span class="nav-card-arrow">&rarr;</span>
+        </a>
+        <a href="#services" class="nav-card" data-nav="services">
+          <span class="nav-card-index">03</span>
+          <span class="nav-card-title">Services</span>
+          <span class="nav-card-desc">Four ways we can work together</span>
+          <span class="nav-card-arrow">&rarr;</span>
+        </a>
+        <a href="#contact" class="nav-card" data-nav="contact">
+          <span class="nav-card-index">04</span>
+          <span class="nav-card-title">Contact</span>
+          <span class="nav-card-desc">Bring us the thing that isn&rsquo;t moving</span>
+          <span class="nav-card-arrow">&rarr;</span>
         </a>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-  <script src="data/posts.js"></script>
+    <!-- ── About ───────────────────────────────────────── -->
+    <section id="about" class="section about reveal">
+      <div class="section-head">
+        <p class="eyebrow">[ About us ]</p>
+        <h2 class="section-title">A non-profit research and design agency. Not a think tank, not a creative studio, not a campaign shop &mdash; the infrastructure that connects all three.</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-block">
+          <p class="about-label">Purpose</p>
+          <p class="about-text">The world doesn&rsquo;t lack awareness. It lacks agency. We exist to close the gap between knowing and acting.</p>
+        </div>
+        <div class="about-block">
+          <p class="about-label">Mission</p>
+          <p class="about-text">We transform complex, real-world challenges into responses that empower collective action, and help organisations navigate the necessary transition.</p>
+        </div>
+        <div class="about-block">
+          <p class="about-label">Vision</p>
+          <p class="about-text">A post-growth, sufficiency-based and equitable world. A better world for all &mdash; not a slightly greener version of this one.</p>
+        </div>
+      </div>
+
+      <div class="about-values">
+        <p class="about-label">What we stand for</p>
+        <ul class="values-list">
+          <li>Physical reality over wishful thinking</li>
+          <li>Sufficiency before efficiency before renewables</li>
+          <li>Open knowledge over owned knowledge</li>
+          <li>Distributed agency over centralised solutions</li>
+        </ul>
+      </div>
+
+      <blockquote class="pull-quote">
+        &ldquo;Organisations hire us when they have knowledge nobody acts on.&rdquo;
+      </blockquote>
+    </section>
+
+    <!-- ── Work ────────────────────────────────────────── -->
+    <section id="work" class="section work reveal">
+      <div class="section-head">
+        <p class="eyebrow">[ Work ]</p>
+        <h2 class="section-title">Not a theory of change. A way of working that has already proven its impact.</h2>
+      </div>
+
+      <div class="work-list">
+        <article class="work-item">
+          <div class="work-meta">
+            <span class="work-tag">Green paper</span>
+            <span class="work-collab">BPIE &middot; VELUX &middot; RISE &middot; Artelia</span>
+          </div>
+          <h3 class="work-title">The Housing We Need, for the Future We Want</h3>
+          <p class="work-tagline">&ldquo;The future is already here, and it&rsquo;s beautiful.&rdquo;</p>
+          <p class="work-desc">Treating climate, biodiversity, resource insecurity and unhealthy homes as one system &mdash; and showing that better use of Europe&rsquo;s existing buildings could unlock up to 107 million homes and avoid up to 19 billion tonnes of CO&#8322;.</p>
+        </article>
+
+        <article class="work-item">
+          <div class="work-meta">
+            <span class="work-tag">Roadmap</span>
+            <span class="work-collab">VELUX</span>
+          </div>
+          <h3 class="work-title">Re:Living</h3>
+          <p class="work-tagline">Restoring the building industry, one existing home at a time.</p>
+          <p class="work-desc">The first model designed to guide the European building industry back within core system boundaries &mdash; built on the People and Planet Model, uniting Earth System Science and Building Biology.</p>
+        </article>
+
+        <article class="work-item">
+          <div class="work-meta">
+            <span class="work-tag">Tool</span>
+            <span class="work-collab">Artelia &middot; Aarhus Kommune</span>
+          </div>
+          <h3 class="work-title">Aarhus Climate Budget Tool</h3>
+          <p class="work-tagline">&ldquo;Turning the global carbon budget into a tool for everyday building decisions.&rdquo;</p>
+          <p class="work-desc">Denmark&rsquo;s first decision-making tool linking municipal construction policy directly to a CO&#8322; budget &mdash; treating carbon like money, governed across a whole portfolio, ahead of time.</p>
+        </article>
+
+        <article class="work-item">
+          <div class="work-meta">
+            <span class="work-tag">Movement</span>
+            <span class="work-collab">EFFEKT &middot; CEBRA &middot; Artelia &middot; 900+ companies</span>
+          </div>
+          <h3 class="work-title">Reduction Roadmap</h3>
+          <p class="work-tagline">&ldquo;Mobilizing the Danish building industry.&rdquo;</p>
+          <p class="work-desc">The first time an entire industry came together not to fight regulation but to demand it &mdash; more than 900 companies signing on for a legally binding, science-aligned carbon cap.</p>
+        </article>
+
+        <article class="work-item">
+          <div class="work-meta">
+            <span class="work-tag">Roadmap</span>
+            <span class="work-collab">EFFEKT &middot; CEBRA &middot; Artelia</span>
+          </div>
+          <h3 class="work-title">Beyond the Roadmap</h3>
+          <p class="work-tagline">&ldquo;A transition plan for the Danish building industry.&rdquo;</p>
+          <p class="work-desc">Asking what comes after reduction &mdash; the Butterfly Framework benchmarks progress against absolute climate and ecological limits, shifting ambition from doing less harm to active restoration.</p>
+        </article>
+
+        <article class="work-item">
+          <div class="work-meta">
+            <span class="work-tag">Roadmap</span>
+            <span class="work-collab">VELUX &middot; Artelia &middot; Enemærk &amp; Petersen &middot; EFFEKT</span>
+          </div>
+          <h3 class="work-title">Living Places</h3>
+          <p class="work-tagline">&ldquo;A new way of thinking about building.&rdquo;</p>
+          <p class="work-desc">Homes built with 60&ndash;75% lower emissions and a threefold improvement in indoor quality &mdash; at market price. The lowest measured building emissions ever recorded at the time, released open source.</p>
+        </article>
+
+        <article class="work-item">
+          <div class="work-meta">
+            <span class="work-tag">Tool</span>
+            <span class="work-collab">Erin Remblance</span>
+          </div>
+          <h3 class="work-title">Beyond Duality</h3>
+          <p class="work-tagline">&ldquo;Unlearning modernity, remembering ecology.&rdquo;</p>
+          <p class="work-desc">An eight-week course for people who want to understand the systems shaping our world &mdash; and gain the agency to change them. A process of moving from sensing something is wrong to knowing how to act on it.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ── Services ────────────────────────────────────── -->
+    <section id="services" class="section services reveal">
+      <div class="section-head">
+        <p class="eyebrow">[ Services ]</p>
+        <h2 class="section-title">You have the research. The numbers hold. So why is nothing happening? We offer four ways in.</h2>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card">
+          <span class="service-num">01</span>
+          <h3 class="service-title">The Green Paper / Report</h3>
+          <p class="service-line">Turn your knowledge into a public agenda.</p>
+          <p class="service-desc">An agenda-setting publication and the campaign around it &mdash; the narrative, the visuals, the launch, the press strategy, the political framing.</p>
+          <p class="service-for">For foundations, NGOs, industry organisations, companies and research institutions.</p>
+        </article>
+
+        <article class="service-card">
+          <span class="service-num">02</span>
+          <h3 class="service-title">The Roadmap</h3>
+          <p class="service-line">Find out what your organisation should actually do.</p>
+          <p class="service-desc">A strategic roadmap grounded in physical reality &mdash; concrete decisions, thresholds and sequences, plus the internal narrative that gets your own people on board.</p>
+          <p class="service-for">For businesses, municipalities, NGOs and institutions sensing their strategy won&rsquo;t survive the next decade.</p>
+        </article>
+
+        <article class="service-card">
+          <span class="service-num">03</span>
+          <h3 class="service-title">The Tool &amp; Prototype</h3>
+          <p class="service-line">Put physical reality into the room where decisions are made.</p>
+          <p class="service-desc">Decision-making tools that translate planetary boundaries into budgets, scenarios and thresholds &mdash; and prototypes that prove the ambitious choice can be built.</p>
+          <p class="service-for">For municipalities, public asset owners, industry organisations and NGOs.</p>
+        </article>
+
+        <article class="service-card">
+          <span class="service-num">04</span>
+          <h3 class="service-title">The Movement</h3>
+          <p class="service-line">Turn agreement into action.</p>
+          <p class="service-desc">Campaigns that convert passive support into visible, repeatable collective action &mdash; the identity, the assets, the coalition, the moments that make joining feel natural.</p>
+          <p class="service-for">For NGOs, alliances, grassroots movements and anyone who needs critical mass, not just an audience.</p>
+        </article>
+      </div>
+
+      <p class="services-note">Why a non-profit? We&rsquo;re legally prohibited from extracting profit. Our advice isn&rsquo;t shaped by upselling &mdash; our incentive is your impact, because impact is the only thing we&rsquo;re allowed to accumulate.</p>
+    </section>
+
+    <!-- ── Contact ─────────────────────────────────────── -->
+    <section id="contact" class="section contact reveal">
+      <p class="eyebrow eyebrow-light">[ Contact ]</p>
+      <h2 class="contact-title">Bring us the thing that isn&rsquo;t moving.</h2>
+      <p class="contact-body">
+        The report nobody acts on. The strategy that stalls. The cause that everyone
+        agrees with and nobody joins. One conversation is usually enough to see whether
+        there&rsquo;s a fit.
+      </p>
+
+      <div class="contact-actions">
+        <a class="btn btn-primary btn-lg" href="mailto:Noobjectives@Outlook.com?subject=Let%27s%20talk">Email us</a>
+        <a class="btn btn-ghost btn-ghost-light btn-lg" href="tel:+4520666089">Call us</a>
+      </div>
+
+      <div class="contact-details">
+        <a class="contact-detail" href="mailto:Noobjectives@Outlook.com">
+          <span class="contact-detail-label">Email</span>
+          <span class="contact-detail-value">Noobjectives@Outlook.com</span>
+        </a>
+        <a class="contact-detail" href="tel:+4520666089">
+          <span class="contact-detail-label">Phone</span>
+          <span class="contact-detail-value">+45 20 66 60 89</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ── Footer ──────────────────────────────────────── -->
+  <footer class="footer">
+    <p class="footer-logo">no objectives</p>
+    <p class="footer-tag">We turn minority insight into majority action.</p>
+    <p class="footer-copy">&copy; <span id="year"></span> No Objectives &mdash; Copenhagen</p>
+  </footer>
+
   <script src="js/app.js"></script>
 </body>
 </html>
