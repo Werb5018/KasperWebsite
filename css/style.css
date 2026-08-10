@@ -95,6 +95,10 @@ a   { color: inherit; text-decoration: none; }
 }
 .btn-primary:hover { background: #c67d24; transform: translateY(-2px); }
 
+/* Light solid button — used on the hero (keeps amber reserved for contact) */
+.btn-light { background: var(--light-white); color: var(--petrol); }
+.btn-light:hover { background: #ffffff; transform: translateY(-2px); }
+
 .btn-ghost {
   background: transparent;
   border-color: var(--ink);
@@ -276,17 +280,18 @@ nav.scrolled .nav-toggle span { background: var(--ink); }
 .intro-lead {
   font-family: var(--sans);
   font-weight: 300;
-  font-size: clamp(22px, 3.2vw, 38px);
-  line-height: 1.28;
-  letter-spacing: -0.01em;
-  max-width: 24ch;
-  margin-bottom: 30px;
+  font-size: clamp(30px, 5.4vw, 58px);
+  line-height: 1.14;
+  letter-spacing: -0.015em;
+  max-width: 16ch;
+  margin-bottom: 28px;
 }
 .intro-body {
-  font-size: clamp(16px, 1.8vw, 19px);
+  font-size: 16px;
+  line-height: 1.7;
   color: var(--muted);
-  max-width: 60ch;
-  margin-bottom: 64px;
+  max-width: 46ch;
+  margin-bottom: 72px;
 }
 
 .nav-cards {
@@ -310,7 +315,7 @@ nav.scrolled .nav-toggle span { background: var(--ink); }
   font-family: var(--mono);
   font-size: 12px;
   letter-spacing: 0.2em;
-  color: var(--amber);
+  color: var(--muted);
   margin-bottom: auto;
 }
 .nav-card-title {
@@ -347,10 +352,10 @@ nav.scrolled .nav-toggle span { background: var(--ink); }
   font-size: 11px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--amber);
+  color: var(--muted);
   margin-bottom: 16px;
 }
-.about-text { color: var(--muted); }
+.about-text { color: var(--muted); font-size: 16px; }
 
 .about-values { margin-bottom: 64px; }
 .values-list {
@@ -372,19 +377,19 @@ nav.scrolled .nav-toggle span { background: var(--ink); }
   position: absolute;
   left: 0; top: 0.7em;
   width: 12px; height: 1px;
-  background: var(--amber);
+  background: var(--dusty-green);
 }
 
 .pull-quote {
   font-family: var(--serif);
   font-style: italic;
   font-weight: 300;
-  font-size: clamp(22px, 3.6vw, 40px);
-  line-height: 1.3;
+  font-size: clamp(26px, 4.6vw, 46px);
+  line-height: 1.24;
   color: var(--ink);
   border-top: 1px solid var(--line);
-  padding-top: 48px;
-  max-width: 24ch;
+  padding-top: 56px;
+  max-width: 20ch;
 }
 
 /* ─── Work ────────────────────────────────────────────────── */
@@ -430,7 +435,7 @@ nav.scrolled .nav-toggle span { background: var(--ink); }
   font-family: var(--serif);
   font-style: italic;
   font-size: clamp(16px, 1.8vw, 19px);
-  color: var(--amber);
+  color: var(--dusty-green);
   margin-bottom: 14px;
 }
 .work-desc { color: var(--muted); max-width: 62ch; }
@@ -455,7 +460,7 @@ nav.scrolled .nav-toggle span { background: var(--ink); }
   font-family: var(--mono);
   font-size: 12px;
   letter-spacing: 0.2em;
-  color: var(--amber);
+  color: var(--muted);
   margin-bottom: 24px;
 }
 .service-title {
@@ -471,7 +476,7 @@ nav.scrolled .nav-toggle span { background: var(--ink); }
   color: var(--ink);
   margin-bottom: 16px;
 }
-.service-desc { color: var(--muted); margin-bottom: 20px; }
+.service-desc { color: var(--muted); font-size: 15px; margin-bottom: 20px; }
 .service-for {
   font-family: var(--mono);
   font-size: 11px;
@@ -487,7 +492,7 @@ nav.scrolled .nav-toggle span { background: var(--ink); }
   color: var(--muted);
   max-width: 70ch;
   padding-left: 22px;
-  border-left: 2px solid var(--amber);
+  border-left: 2px solid var(--sage);
 }
 
 /* ─── Contact ─────────────────────────────────────────────── */
@@ -579,8 +584,8 @@ nav.scrolled .nav-toggle span { background: var(--ink); }
 }
 
 /* ─── Nav active state (multi-page) ───────────────────────── */
-.nav-links a.active { opacity: 1; color: var(--amber); }
-nav.scrolled .nav-links a.active { color: var(--amber); }
+.nav-links a.active { opacity: 1; }
+.nav-links a.active:not(.nav-cta) { border-bottom: 1px solid currentColor; padding-bottom: 3px; }
 
 /* ─── Inner page header (banner) ──────────────────────────── */
 .page-header {
@@ -605,7 +610,7 @@ nav.scrolled .nav-links a.active { color: var(--amber); }
     linear-gradient(0deg, rgba(15,28,21,0.88) 0%, rgba(15,28,21,0.55) 45%, rgba(15,28,21,0.62) 100%);
 }
 .page-header-inner { position: relative; z-index: 2; max-width: var(--maxw); margin: 0 auto; width: 100%; }
-.page-header .eyebrow { color: var(--amber-dim); }
+.page-header .eyebrow { color: rgba(246,244,238,0.72); }
 .page-title {
   font-family: var(--sans);
   font-weight: 300;
@@ -660,20 +665,27 @@ nav.scrolled .nav-links a.active { color: var(--amber); }
   font-family: var(--serif);
   font-style: italic;
   font-size: clamp(17px, 1.9vw, 20px);
-  color: var(--amber);
+  color: var(--dusty-green);
   margin-bottom: 16px;
 }
-.project-desc { color: var(--muted); }
+.project-desc { color: var(--muted); font-size: 16px; max-width: 46ch; }
 
 /* ─── About extras ────────────────────────────────────────── */
 .about-lead {
   font-family: var(--sans);
   font-weight: 300;
-  font-size: clamp(22px, 3vw, 34px);
-  line-height: 1.28;
-  letter-spacing: -0.01em;
-  max-width: 24ch;
-  margin-bottom: 30px;
+  font-size: clamp(28px, 4.6vw, 50px);
+  line-height: 1.16;
+  letter-spacing: -0.015em;
+  max-width: 18ch;
+  margin-bottom: 56px;
+}
+.lead-support {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--muted);
+  max-width: 50ch;
+  margin-bottom: 64px;
 }
 .stance {
   display: grid;
@@ -686,12 +698,12 @@ nav.scrolled .nav-links a.active { color: var(--amber); }
 .stance-col { background: var(--bg); padding: 34px; }
 .stance-col ul { list-style: none; margin-top: 14px; }
 .stance-col li { padding: 8px 0 8px 24px; position: relative; color: var(--muted); }
-.stance-col li::before { content: ""; position: absolute; left: 0; top: 1em; width: 12px; height: 1px; background: var(--amber); }
+.stance-col li::before { content: ""; position: absolute; left: 0; top: 1em; width: 12px; height: 1px; background: var(--dusty-green); }
 
 /* ─── How it works (services) ─────────────────────────────── */
 .phases { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--line); border: 1px solid var(--line); margin-top: 56px; }
 .phase { background: var(--bg); padding: 34px 30px; }
-.phase-num { font-family: var(--mono); font-size: 12px; letter-spacing: 0.2em; color: var(--amber); }
+.phase-num { font-family: var(--mono); font-size: 12px; letter-spacing: 0.2em; color: var(--muted); }
 .phase-name { font-family: var(--sans); font-weight: 400; font-size: 21px; margin: 16px 0 10px; }
 .phase-desc { color: var(--muted); font-size: 15px; }
 
