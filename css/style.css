@@ -578,6 +578,215 @@ nav.scrolled .nav-toggle span { background: var(--ink); }
   letter-spacing: 0.1em;
 }
 
+/* ─── Nav active state (multi-page) ───────────────────────── */
+.nav-links a.active { opacity: 1; color: var(--amber); }
+nav.scrolled .nav-links a.active { color: var(--amber); }
+
+/* ─── Inner page header (banner) ──────────────────────────── */
+.page-header {
+  position: relative;
+  min-height: 52vh;
+  display: flex;
+  align-items: flex-end;
+  padding: var(--nav-h) var(--edge) clamp(40px, 7vh, 80px);
+  overflow: hidden;
+  color: var(--light-white);
+}
+.page-header-img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.page-header::after {
+  content: "";
+  position: absolute; inset: 0; z-index: 1;
+  background:
+    linear-gradient(0deg, rgba(15,28,21,0.88) 0%, rgba(15,28,21,0.55) 45%, rgba(15,28,21,0.62) 100%);
+}
+.page-header-inner { position: relative; z-index: 2; max-width: var(--maxw); margin: 0 auto; width: 100%; }
+.page-header .eyebrow { color: var(--amber-dim); }
+.page-title {
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: clamp(30px, 5.2vw, 60px);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  max-width: 20ch;
+}
+.page-intro {
+  margin-top: 22px;
+  font-size: clamp(16px, 1.9vw, 20px);
+  color: rgba(246,244,238,0.82);
+  max-width: 56ch;
+}
+
+/* ─── Work project blocks (with images) ───────────────────── */
+.work-projects { display: flex; flex-direction: column; gap: clamp(56px, 9vh, 110px); }
+.project {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(28px, 5vw, 64px);
+  align-items: center;
+}
+.project:nth-child(even) .project-media { order: 2; }
+.project-media {
+  overflow: hidden;
+  border-radius: 3px;
+  background: var(--off-white);
+  aspect-ratio: 3 / 2;
+}
+.project-media img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform .6s ease;
+}
+.project:hover .project-media img { transform: scale(1.03); }
+.project-meta { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-bottom: 18px; }
+.project-collab {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.03em;
+  color: var(--faint);
+}
+.project-title {
+  font-family: var(--sans);
+  font-weight: 400;
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1.15;
+  margin-bottom: 10px;
+}
+.project-tagline {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(17px, 1.9vw, 20px);
+  color: var(--amber);
+  margin-bottom: 16px;
+}
+.project-desc { color: var(--muted); }
+
+/* ─── About extras ────────────────────────────────────────── */
+.about-lead {
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: clamp(22px, 3vw, 34px);
+  line-height: 1.28;
+  letter-spacing: -0.01em;
+  max-width: 24ch;
+  margin-bottom: 30px;
+}
+.stance {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  margin-bottom: 64px;
+}
+.stance-col { background: var(--bg); padding: 34px; }
+.stance-col ul { list-style: none; margin-top: 14px; }
+.stance-col li { padding: 8px 0 8px 24px; position: relative; color: var(--muted); }
+.stance-col li::before { content: ""; position: absolute; left: 0; top: 1em; width: 12px; height: 1px; background: var(--amber); }
+
+/* ─── How it works (services) ─────────────────────────────── */
+.phases { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--line); border: 1px solid var(--line); margin-top: 56px; }
+.phase { background: var(--bg); padding: 34px 30px; }
+.phase-num { font-family: var(--mono); font-size: 12px; letter-spacing: 0.2em; color: var(--amber); }
+.phase-name { font-family: var(--sans); font-weight: 400; font-size: 21px; margin: 16px 0 10px; }
+.phase-desc { color: var(--muted); font-size: 15px; }
+
+/* ─── Contact CTA + form ──────────────────────────────────── */
+.contact-cta {
+  background: var(--petrol);
+  color: var(--light-white);
+  padding: clamp(72px, 12vh, 140px) var(--edge);
+}
+.contact-cta-inner { max-width: 760px; margin: 0 auto; text-align: center; }
+.contact-cta .contact-title {
+  font-family: var(--sans);
+  font-weight: 300;
+  font-size: clamp(28px, 4.6vw, 52px);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin-bottom: 20px;
+}
+.contact-cta .contact-body {
+  font-size: clamp(16px, 1.9vw, 19px);
+  color: rgba(246,244,238,0.78);
+  max-width: 48ch;
+  margin: 0 auto 44px;
+}
+
+.cform { text-align: left; }
+.cform-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 26px; }
+.cform-field { display: flex; flex-direction: column; gap: 8px; }
+.cform-span { grid-column: 1 / -1; }
+.cform label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--amber-dim);
+}
+.cform input, .cform textarea {
+  font-family: var(--serif);
+  font-size: 16px;
+  color: var(--light-white);
+  background: rgba(246,244,238,0.04);
+  border: 1px solid rgba(246,244,238,0.22);
+  border-radius: 2px;
+  padding: 14px 16px;
+  transition: border-color .2s ease, background .2s ease;
+  width: 100%;
+}
+.cform input:focus, .cform textarea:focus {
+  outline: none;
+  border-color: var(--amber);
+  background: rgba(246,244,238,0.07);
+}
+.cform textarea { resize: vertical; min-height: 130px; }
+.cform-honey { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.cform .btn { width: 100%; }
+
+.contact-quick {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px 40px;
+  margin-top: 40px;
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+}
+.contact-quick a { color: rgba(246,244,238,0.85); border-bottom: 1px solid transparent; padding-bottom: 2px; transition: border-color .2s ease, color .2s ease; }
+.contact-quick a:hover { color: var(--light-white); border-color: var(--amber); }
+
+/* ─── Contact page (dedicated) ────────────────────────────── */
+.contact-page {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(32px, 6vw, 80px);
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: clamp(64px, 10vh, 130px) var(--edge);
+}
+.contact-page .cform label { color: var(--muted); }
+.contact-page .cform input, .contact-page .cform textarea {
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--line);
+}
+.contact-page .cform input:focus, .contact-page .cform textarea:focus { border-color: var(--amber); background: #fff; }
+.contact-aside-label {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--amber); margin-bottom: 12px;
+}
+.contact-aside p { color: var(--muted); margin-bottom: 30px; }
+.contact-aside-line { display: block; margin-bottom: 20px; }
+.contact-aside-line .lbl { font-family: var(--mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--faint); display: block; margin-bottom: 4px; }
+.contact-aside-line .val { font-family: var(--sans); font-weight: 300; font-size: clamp(18px, 2.4vw, 24px); }
+.form-note { font-family: var(--mono); font-size: 11px; letter-spacing: 0.02em; color: var(--faint); margin-top: 16px; line-height: 1.6; }
+
 /* ─── Reveal-on-scroll ────────────────────────────────────── */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s ease, transform .8s ease; }
 .reveal.in { opacity: 1; transform: none; }
@@ -617,6 +826,12 @@ nav.scrolled .nav-toggle span { background: var(--ink); }
   .values-list { grid-template-columns: 1fr; }
   .work-item { grid-template-columns: 1fr; gap: 16px; }
   .work-item:hover { padding-left: 0; }
+
+  .project { grid-template-columns: 1fr; gap: 22px; }
+  .project:nth-child(even) .project-media { order: 0; }
+  .contact-page { grid-template-columns: 1fr; }
+  .stance { grid-template-columns: 1fr; }
+  .phases { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 560px) {
@@ -624,6 +839,7 @@ nav.scrolled .nav-toggle span { background: var(--ink); }
   .services-grid { grid-template-columns: 1fr; }
   .contact-detail + .contact-detail { border-left: none; border-top: 1px solid rgba(246,244,238,0.18); }
   .hero-actions .btn, .contact-actions .btn { flex: 1 1 auto; }
+  .cform-grid { grid-template-columns: 1fr; }
 }
 
 /* ─── Reduced motion ──────────────────────────────────────── */

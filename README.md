@@ -1,31 +1,64 @@
 # No Objectives — website
 
-A single-page, minimal brand site for **No Objectives**, a non-profit research
+A minimal, multi-page brand site for **No Objectives**, a non-profit research
 and design agency. Built to do one job: help the right people take contact.
 
-Everything lives in three files — no build step, no framework. Just open
-`index.html` in a browser, or host the folder anywhere (GitHub Pages, Netlify,
-your own server).
+No build step, no framework — just static files. Open `index.html` in a
+browser, or host the folder anywhere (GitHub Pages, Netlify, your own server).
 
 ```
-index.html      →  all the content & structure
-css/style.css   →  all the styling (colours + fonts up top)
-js/app.js       →  nav, smooth scrolling, scroll-in animation
+index.html       →  Home (hero + intro + links)
+about.html       →  About us
+work.html        →  Work (7 projects)
+services.html    →  Services (4 offers)
+contact.html     →  Contact (form + details)
+css/style.css    →  all styling (colours + fonts at the top)
+js/app.js        →  nav, mobile menu, scroll animation
+images/          →  photos (see below)
 ```
+
+Every page ends with a **contact form**, and the nav's *Get in touch* always
+leads to the contact page — so a visitor is never more than one click from
+reaching you.
 
 ---
 
-## The page, top to bottom
+## The contact form
 
-1. **Hero** — full-screen opening with the logo, the tagline, and two buttons
-   (*Start a conversation* / *See what we do*).
-2. **Introduction** — the core idea, plus four big buttons that jump to
-   **About us · Work · Services · Contact**.
-3. **About us** — purpose, mission, vision and what the agency stands for.
-4. **Work** — seven selected projects with taglines and collaborators.
-5. **Services** — the four offers (Green Paper, Roadmap, Tool & Prototype,
-   Movement).
-6. **Contact** — email and phone, wired to open the mail app / dialler directly.
+The form uses **[FormSubmit](https://formsubmit.co)** — no account, no API key.
+It posts to `Noobjectives@Outlook.com`.
+
+**One-time activation:** the *first* time someone submits the form on the live
+site, FormSubmit emails you a link to click "Activate". After that, every
+submission lands in your inbox. (This only works once the site is hosted on a
+real URL — it won't send from a local file or the preview.)
+
+To change the destination address, search the `.html` files for
+`formsubmit.co/Noobjectives@Outlook.com`.
+
+---
+
+## Swapping images
+
+Drop replacements into `images/` using the same filenames and everything
+updates automatically. Landscape/horizontal photos work best.
+
+| File | Used for |
+|---|---|
+| `images/hero.jpg` | Home hero (big opening image) |
+| `images/about.jpg` | About page header |
+| `images/work.jpg` | Work page header |
+| `images/services.jpg` | Services page header |
+| `images/contact.jpg` | Contact page header |
+| `images/work/housing.jpg` | Project: The Housing We Need |
+| `images/work/reliving.jpg` | Project: Re:Living |
+| `images/work/aarhus.jpg` | Project: Aarhus Climate Budget Tool |
+| `images/work/reduction-roadmap.jpg` | Project: Reduction Roadmap |
+| `images/work/beyond-roadmap.jpg` | Project: Beyond the Roadmap |
+| `images/work/living-places.jpg` | Project: Living Places |
+| `images/work/beyond-duality.jpg` | Project: Beyond Duality |
+
+The current images are placeholders pulled from the brand strategy PDF.
 
 ---
 
@@ -33,18 +66,11 @@ js/app.js       →  nav, smooth scrolling, scroll-in animation
 
 | What | Where |
 |---|---|
-| Email address | `index.html` — search for `Noobjectives@Outlook.com` (appears in the nav CTA, contact buttons and contact card) |
-| Phone number | `index.html` — search for `4520666089` (the `tel:` link) and `+45 20 66 60 89` (the visible text) |
-| Any wording | `index.html` — text sits in plain, labelled sections |
-| Brand colours | `css/style.css` — the `:root` block at the very top |
+| Email address | search the `.html` files for `Noobjectives@Outlook.com` |
+| Phone number | search for `4520666089` (link) and `+45 20 66 60 89` (text) |
+| Any wording | the text sits in plain, labelled sections in each `.html` |
+| Brand colours | `css/style.css` — the `:root` block at the top |
 | Fonts | `css/style.css` — `--sans`, `--serif`, `--mono` in `:root` |
-
-### Swapping the hero photo
-
-The hero uses `images/hero.jpg` (the cover photograph from the brand strategy).
-To change it, just replace that file with your own — roughly landscape,
-~1920px wide. The dark overlay that keeps the logo readable is applied
-automatically in CSS, so no other changes are needed.
 
 ---
 
@@ -59,7 +85,6 @@ automatically in CSS, so no other changes are needed.
 | Dusty Green | `#506157` | secondary text |
 | Sage | `#A4AA9C` | muted text |
 | Amber | `#DA8D31` | accent |
-| Amber dim | `#E9BE89` | accent (light) |
 
 ## Fonts
 
@@ -67,4 +92,4 @@ automatically in CSS, so no other changes are needed.
 - **Newsreader** — reading text
 - **JetBrains Mono** — labels, captions, buttons
 
-Loaded from Google Fonts in the `<head>`.
+Loaded from Google Fonts in each page's `<head>`.

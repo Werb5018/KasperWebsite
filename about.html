@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — No Objectives</title>
+  <meta name="description" content="A non-profit research and design agency — the infrastructure that connects research, design and mobilisation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav id="nav">
+    <a href="index.html" class="nav-logo">no objectives</a>
+    <ul class="nav-links">
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html" class="nav-cta">Get in touch</a></li>
+    </ul>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </nav>
+  <header class="page-header">
+    <img class="page-header-img" src="images/about.jpg" alt="A river winding through a green valley with a small tent on its bank">
+    <div class="page-header-inner">
+      <p class="eyebrow">[ About us ]</p>
+      <h1 class="page-title">A non-profit research and design agency.</h1>
+      <p class="page-intro">Not a think tank, not a creative studio, not a campaign shop &mdash; the infrastructure that connects all three, because change dies in the gaps between them.</p>
+    </div>
+  </header>
+  <main>
+    <section class="section reveal">
+      <p class="about-lead">The world doesn&rsquo;t lack awareness. It lacks agency. We exist to close the gap between knowing and acting.</p>
+      <div class="about-grid">
+        <div class="about-block">
+          <p class="about-label">Purpose</p>
+          <p class="about-text">People already know the system is failing. What they lack is a future they can see themselves in, and a way to help build it. We turn minority insight into majority action.</p>
+        </div>
+        <div class="about-block">
+          <p class="about-label">Mission</p>
+          <p class="about-text">We transform complex, real-world challenges into responses that empower collective action, and help organisations navigate the necessary transition.</p>
+        </div>
+        <div class="about-block">
+          <p class="about-label">Vision</p>
+          <p class="about-text">A post-growth, sufficiency-based and equitable world. A better world for all &mdash; not a slightly greener version of this one.</p>
+        </div>
+      </div>
+
+      <div class="about-values">
+        <p class="about-label">What we stand for</p>
+        <ul class="values-list">
+          <li>Physical reality over wishful thinking</li>
+          <li>Sufficiency before efficiency before renewables</li>
+          <li>Open knowledge over owned knowledge</li>
+          <li>Distributed agency over centralised solutions</li>
+        </ul>
+      </div>
+
+      <div class="stance">
+        <div class="stance-col">
+          <p class="about-label">What we do</p>
+          <ul>
+            <li>Turn research and insight into public agendas that shape debate and policy</li>
+            <li>Build transition roadmaps that make organisations resilient within planetary boundaries</li>
+            <li>Design decision-making tools that translate climate science into governance</li>
+            <li>Design campaigns and coalitions that convert agreement into action</li>
+          </ul>
+        </div>
+        <div class="stance-col">
+          <p class="about-label">What we don&rsquo;t</p>
+          <ul>
+            <li>Help greenwash, or dress expansion up as transition</li>
+            <li>Do growth marketing</li>
+            <li>Produce communication that isn&rsquo;t anchored in research that holds</li>
+            <li>Sell silver bullets</li>
+          </ul>
+        </div>
+      </div>
+
+      <blockquote class="pull-quote">&ldquo;Organisations hire us when they have knowledge nobody acts on.&rdquo;</blockquote>
+    </section>
+  </main>
+  <section id="contact" class="contact-cta reveal">
+    <div class="contact-cta-inner">
+      <p class="eyebrow eyebrow-light">[ Contact ]</p>
+      <h2 class="contact-title">Bring us the thing that isn&rsquo;t moving.</h2>
+      <p class="contact-body">The report nobody acts on. The strategy that stalls. The cause everyone agrees with and nobody joins. One conversation is usually enough to see whether there&rsquo;s a fit.</p>
+      <form class="cform" action="https://formsubmit.co/Noobjectives@Outlook.com" method="POST">
+        <input type="hidden" name="_subject" value="New enquiry from noobjectives.com">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" class="cform-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="cform-grid">
+          <div class="cform-field">
+            <label for="about-name">Name</label>
+            <input id="about-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="cform-field">
+            <label for="about-email">Email</label>
+            <input id="about-email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="cform-field cform-span">
+            <label for="about-org">Organisation</label>
+            <input id="about-org" name="organisation" type="text" autocomplete="organization">
+          </div>
+          <div class="cform-field cform-span">
+            <label for="about-msg">What isn&rsquo;t moving?</label>
+            <textarea id="about-msg" name="message" rows="5" required></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg">Send message</button>
+      </form>
+      <div class="contact-quick">
+        <a href="mailto:Noobjectives@Outlook.com">Noobjectives@Outlook.com</a>
+        <a href="tel:+4520666089">+45 20 66 60 89</a>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <p class="footer-logo">no objectives</p>
+    <p class="footer-tag">We turn minority insight into majority action.</p>
+    <p class="footer-copy">&copy; <span id="year"></span> No Objectives &mdash; Copenhagen</p>
+  </footer>
+  <script src="js/app.js"></script>
+</body>
+</html>
